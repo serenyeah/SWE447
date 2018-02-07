@@ -52,6 +52,8 @@ var Cone = {
     render();
 },
         draw : function () {
+               
+    gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT );
 
             gl.useProgram(this.program);
 
@@ -70,12 +72,8 @@ var Cone = {
             offset =10*/* sizeof(unsigned short) = */2;
             gl.drawArrays(gl.POINTS, count, gl.UNSIGNED_SHORT, offset);
         }
-};
-
-function render() {
-    gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT );
     window.requestAnimationFrame(render);
-}
+};
 
 window.onload = init;
         
