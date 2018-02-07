@@ -44,6 +44,12 @@ var Cone = {
             gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,this.indices.buffer);
             gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,newUint16Array(indices), gl.STATIC_DRAW
             this.positions.attribute = gl.getAttribLocation(this.program,"vPosition");
+           
+    gl.clearColor( 1.0, 1.0, 0.0, 1.0 );
+    gl.enable(gl.DEPTH_TEST);
+    window.requestAnimationFrame(render);
+
+    render();
 },
         draw : function () {
 
@@ -66,5 +72,10 @@ var Cone = {
         }
 };
 
+function render() {
+    gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT );
+    window.requestAnimationFrame(render);
+}
 
+window.onload = init;
         
