@@ -11,12 +11,15 @@ function init() {
     }
 
     gl.clearColor( 1.0, 1.0, 0.0, 1.0 );
+    gl.enable(gl.DEPTH_TEST);
+    window.requestAnimationFrame(render);
 
     render();
 }
 
 function render() {
-    gl.clear( gl.COLOR_BUFFER_BIT );
+    gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT );
+    window.requestAnimationFrame(render);
 }
 
 window.onload = init;
