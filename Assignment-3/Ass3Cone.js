@@ -59,16 +59,16 @@ var Cone = {
             gl.vertexAttribPointer(this.position.attribute,this.positions.numComponents, gl.FLOAT, gl.FALSE,0,0);
             gl.enableVertexAttrib(this.positions.attribute);
 
-            gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,this.indices.buffer); 
+            gl.bindBuffer(gl.ARRAY_BUFFER,this.indices.buffer); 
 
             // Render the base of the cone
             var count =10; // see init().  We'd really like this.baseCount, or something else clever
             var offset =0; // start at the beginning of the buffer
-            gl.drawElements(gl.TRIANGLE_FAN, count, gl.UNSIGNED_SHORT, offset);
+            gl.drawArrays(gl.POINTS, count, gl.UNSIGNED_SHORT, offset);
 
             count =10; // same number of indices for the cone as the base
             offset =10*/* sizeof(unsigned short) = */2;
-            gl.drawElements(gl.TRIANGLE_FAN, count, gl.UNSIGNED_SHORT, offset);
+            gl.drawArrays(gl.POINTS, count, gl.UNSIGNED_SHORT, offset);
         }
 };
 
