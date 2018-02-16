@@ -55,7 +55,7 @@ function init() {
   gl = WebGLUtils.setupWebGL(canvas);
   if (!gl) { alert("WebGL initialization failed"); }
 
-  gl.clearColor(0.0, 0.0, 0.0, 0.0); //(0.0, 0.0, 0.0, 1.0) <-Black
+  gl.clearColor(0.0, 0.0, 0.0, 1.0); //(0.0, 0.0, 0.0, 1.0) <-Black
   gl.enable(gl.DEPTH_TEST);
 
   // Initialize the planets in the Planets list, including specifying
