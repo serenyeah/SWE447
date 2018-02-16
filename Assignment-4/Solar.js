@@ -149,6 +149,8 @@ function render() {
   planet = Planets[name];
   data = SolarSystem[name];
   
+  planet.PointMode = true;
+  
   ms.push();
   ms.rotate(data.year, axis);
   ms.translate(data.distance, 0, 0);
