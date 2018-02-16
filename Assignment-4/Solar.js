@@ -177,7 +177,7 @@ function resize() {
 
   gl.viewport(0, 0, w, h);
 
-  var fovy = 150.0; // degrees //orininal = 100.0
+  var fovy = 100.0; // degrees //orininal = 100.0
   var aspect = w / h;
 
   P = perspective(fovy, aspect, near, far);
