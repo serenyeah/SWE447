@@ -145,6 +145,7 @@ function render() {
 
   //
   //  Add your code for more planets here!
+  /*
   name = "Earth";
   
   planet.PointMode = true;
@@ -159,6 +160,7 @@ function render() {
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
   ms.pop();
+  */
   //
 
   window.requestAnimationFrame(render);
