@@ -148,7 +148,7 @@ function render() {
   
   name = "Earth";
   
-  planet.PointMode = true;
+  planet.PointMode = false;
   
   ms.push();
   ms.rotate(data.year, axis);
