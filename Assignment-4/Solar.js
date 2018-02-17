@@ -150,7 +150,7 @@ function render() {
   planet = Planets[name];
   data = SolarSystem[name];
   
-  planet.PointMode = false;
+  planet.PointMode = true;
   
   ms.push();
   ms.rotate(data.year, axis);
