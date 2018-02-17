@@ -116,7 +116,7 @@ function render() {
   // used; it'll simplify the work you need to do.
 
   var name, planet, data;
-
+/*
   name = "Sun";
   planet = Planets[name];
   data = SolarSystem[name];
@@ -142,11 +142,13 @@ function render() {
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
   ms.pop();
-
+*/
   //
   //  Add your code for more planets here!
   
   name = "Earth";
+  planet = Planets[name];
+  data = SolarSystem[name];
   
   planet.PointMode = false;
   
