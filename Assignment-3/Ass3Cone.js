@@ -3,9 +3,9 @@ var gl = null;
 function init() {
     var canvas = document.getElementById( "webgl-canvas" );
        
-    cone = new Cone( gl, 10, "Cone-vertex-shader", "Cone-fragment-shader");
-
     gl = WebGLUtils.setupWebGL( canvas );
+
+    cone = new Cone( gl, 10, "Cone-vertex-shader", "Cone-fragment-shader");
 
     if ( !gl ) {
         alert("Unable to setup WebGL");
