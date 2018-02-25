@@ -17,10 +17,10 @@ var gl;
 // around the Sun. 
 
 var Planets = {
-  Sun : undefined,
+  // Sun : undefined,
   // Mercury : undefined,
   // Venus : undefined,
-  // Earth : undefined,
+  Earth : undefined,
   // Moon : undefined,
   // Mars : undefined,
   // Jupiter : undefined,
@@ -116,7 +116,7 @@ function render() {
   // used; it'll simplify the work you need to do.
 
   var name, planet, data;
-
+/*  
   name = "Sun";
   planet = Planets[name];
   data = SolarSystem[name];
@@ -142,10 +142,10 @@ function render() {
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
   ms.pop();
-
+*/  
   //
   //  Add your code for more planets here!
-/*  
+
   name = "Earth";
   planet = Planets[name];
   data = SolarSystem[name];
@@ -153,8 +153,8 @@ function render() {
   planet.PointMode = true;
   
   ms.push();
-  ms.rotate(data.year, axis);
-  ms.scale(10, ms.translate(data.distance, 0, 0));
+//  ms.rotate(data.year, axis);
+//  ms.scale(10, ms.translate(data.distance, 0, 0));
   ms.scale(data.radius);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
@@ -162,7 +162,7 @@ function render() {
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
   ms.pop();
-*/  
+
   //
 
   window.requestAnimationFrame(render);
