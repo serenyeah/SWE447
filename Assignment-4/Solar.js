@@ -145,7 +145,7 @@ function render() {
   
   //
   //  Add your code for more planets here!
-
+  /*
   name = "Earth";
   planet = Planets[name];
   data = SolarSystem[name];
@@ -163,7 +163,7 @@ function render() {
   gl.uniform4fv(planet.uniforms.color, flatten(data.color));
   planet.render();
   ms.pop();
-
+  */
   //
 
   window.requestAnimationFrame(render);
