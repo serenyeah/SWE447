@@ -20,7 +20,7 @@ var Planets = {
   Sun : undefined,
   // Mercury : undefined,
   // Venus : undefined,
-  Earth : undefined,
+  // Earth : undefined,
   // Moon : undefined,
   // Mars : undefined,
   // Jupiter : undefined,
