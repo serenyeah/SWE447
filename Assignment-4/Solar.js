@@ -17,10 +17,10 @@ var gl;
 // around the Sun. 
 
 var Planets = {
-  Sun : undefined,
+  // Sun : undefined,
   // Mercury : undefined,
   // Venus : undefined,
-  // Earth : undefined,
+  Earth : undefined,
   // Moon : undefined,
   // Mars : undefined,
   // Jupiter : undefined,
