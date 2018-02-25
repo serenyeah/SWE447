@@ -35,8 +35,8 @@ var V;  // matrix storing the viewing transformation
 
 // Projection transformation parameters
 var P;  // matrix storing the projection transformation
-var near = 10;      // near clipping plane's distance
-var far = 120;      // far clipping plane's distance
+var near = 25;      // near clipping plane's distance
+var far = 275;      // far clipping plane's distance
 
 // Animation variables
 var time = 0.0;      // time, our global time constant, which is 
@@ -153,10 +153,10 @@ function render() {
   planet.PointMode = false;
   
   ms.push();
-  ms.rotate(data.year, axis);
-//  ms.scale(10, ms.translate(data.distance, 0, 0));
-  ms.translate(data.distance);
   ms.scale(data.radius);
+//  ms.scale(10, ms.translate(data.distance, 0, 0));
+  ms.rotate(data.year, axis);
+  ms.translate(data.distance);
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
@@ -180,7 +180,7 @@ function resize() {
 
   gl.viewport(0, 0, w, h);
 
-  var fovy = 100.0; // degrees //orininal = 100.0
+  var fovy = 120.0; // degrees //orininal = 100.0
   var aspect = w / h;
 
   P = perspective(fovy, aspect, near, far);
