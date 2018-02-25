@@ -33,36 +33,42 @@ var SolarSystem = {
     radius : 0.532,
     distance : 1.52,
     year : 1.88,
-    color : [ 1.0, 0.0, 0.0, 1.0 ]
+    color : [ 1.0, 0.0, 0.0, 1.0 ],
+    moonCount : 2
   },
   Jupiter : {
     radius : 11.21,
     distance : 5.20,
     year : 11.9,
-    color : [ 1.0, 153/255, 0.0, 1.0 ]
+    color : [ 1.0, 153/255, 0.0, 1.0 ],
+    moonCount : 67
   },
   Saturn : {
     radius : 9.45,
     distance : 9.58,
     year : 29.4,
-    color : [ 1.0, 1.0, 0.0, 1.0 ]
+    color : [ 1.0, 1.0, 0.0, 1.0 ],
+    moonCount : 62
   },
   Uranus : {
     radius : 4.01,
     distance : 19.20,
     year : 83.7,
-    color : [ 0.0, 0.1, 1.0, 1.0 ]
+    color : [ 0.0, 0.1, 1.0, 1.0 ],
+    moonCount : 27
   },
   Neptune : {
     radius : 3.88,
     distance : 30.05,
     year : 163.7,
-    color : [ 0.0, 0.0, 1.0, 1.0 ]
+    color : [ 0.0, 0.0, 1.0, 1.0 ],
+    moonCount : 14
   },
   Pluto : {
     radius : 0.186,
     distance : 39.48,
     year : 247.9,
-    color : [ 150/255, 75/255, 0.0, 1.0 ]
+    color : [ 150/255, 75/255, 0.0, 1.0 ],
+    moonCount : 5
   }
 };
