@@ -17,10 +17,10 @@ var gl;
 // around the Sun. 
 
 var Planets = {
-  // Sun : undefined,
+  Sun : undefined,
   // Mercury : undefined,
   // Venus : undefined,
-  Earth : undefined,
+  // Earth : undefined,
   // Moon : undefined,
   // Mars : undefined,
   // Jupiter : undefined,
@@ -150,7 +150,7 @@ function render() {
   planet = Planets[name];
   data = SolarSystem[name];
   
-  planet.PointMode = true;
+  planet.PointMode = false;
   
   ms.push();
 //  ms.rotate(data.year, axis);
