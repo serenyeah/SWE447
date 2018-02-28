@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../Common/webgl-utils.js"></script>
+  <script src="../Common/initShaders.js"></script>
+  <script src="checkerboard.js"></script> 
+  <script id="Checkerboard-vertex-shader" type="x-shader/x-vertex">
+  attribute vec4 vPosition;
+  varying vec2 texCoord;
+  
+  void main () {
+      texCoord = 0.5 *
+      (vPosition.xy + vec2(1));
+      gl_Position = 0.8 * vPosition;
+      gl_Position.w = 1.0;
+  }
+  </script>
+  
+  <script id="Checkerboard-fragment-shader" type="x-shader/x-fragment">
+  varying vec2 texCoord;
+  
+  void main () {
+    const int BlocksPerRow = 10;
+    
+    ivec2 p = ivec2 (BlocksPerRow * texCoord) % 2;
+    gl_FragColor.rgb = vec3(p.x ^^ p.y);
+    gl_FragColor.a = 1.0
+  }
+  </script>
+
+</head>
+<body>
+  <canvas id="webgl-canvas" width="512" height="512" style="background-color: #0000FF"></canvas>
+</body>
+</html>
