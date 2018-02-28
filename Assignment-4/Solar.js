@@ -154,7 +154,8 @@ function render() {
   
   ms.push();
   ms.scale(data.radius);
-//  ms.scale(10, ms.translate(data.distance, 0, 0));
+  ms.scale(data.distance, 10);
+  ms.translate(data.distance, 0, 0);
   ms.rotate(data.year, axis);
   ms.translate(data.distance);
   gl.useProgram(planet.program);
