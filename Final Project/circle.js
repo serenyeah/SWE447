@@ -14,3 +14,14 @@ function draw()
       ctx.stroke();
   }
 }
+
+/*
+circleXY(Vector3f center, float radius, int dots) {
+    float stepSize = ((2*Math.PI)/dots);
+    for (float d = 0; d <= (2*Math.PI)-stepSize; d += stepSize) {
+      addPoint(((sin(d) * radius) + center.x),
+                (cos(d) * radius) + center.y));
+    }
+    return result;
+}
+*/
